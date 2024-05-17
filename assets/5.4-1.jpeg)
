@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Error>
+  <Code>NoSuchKey</Code>
+  <Message>The specified key does not exist.</Message>
+  <RequestId>664777105878D23135F7AC2E</RequestId>
+  <HostId>lark-assets-prod-aliyun.oss-cn-hangzhou.aliyuncs.com</HostId>
+  <Key>yuque/0/2024/jpeg/12763465/1711691118731-401c2d74-f147-4e6d-8759-e8c9670d42eb.jpeg)
+</Key>
+  <EC>0026-00000001</EC>
+  <RecommendDoc>https://api.aliyun.com/troubleshoot?q=0026-00000001</RecommendDoc>
+</Error>
