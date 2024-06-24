@@ -1,0 +1,20 @@
+metadata:
+  graph:
+    action:
+    - observation
+    next_observation:
+    - observation
+    - action
+  columns:
+  - X:
+      dim: observation
+      type: continuous
+  - Y:
+      dim: observation
+      type: continuous
+  - theta_dt:
+      dim: observation
+      type: continuous
+  - torque:
+      dim: action
+      type: continuous

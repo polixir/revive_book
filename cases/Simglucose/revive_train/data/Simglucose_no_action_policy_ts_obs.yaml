@@ -1,0 +1,193 @@
+metadata:
+  columns:
+  - bg:
+      dim: obs
+      type: continuous
+      max: 600
+      min: 35
+
+  - delta_obs:
+      dim: delta_obs
+      type: continuous
+      max: 40
+      min: -40
+
+  - property_0:
+      dim: property
+      type: continuous
+      max: 112
+      min: 28
+  - property_1:
+      dim: property
+      type: continuous
+      max: 1
+      min: 1
+  - property_2:
+      dim: property
+      type: continuous
+      max: 132
+      min: 83
+  - property_3:
+      dim: property
+      type: continuous
+      max: 279
+      min: 185
+  - property_4:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_5:
+      dim: property
+      type: continuous
+      max: 13
+      min: 2
+  - property_6:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_7:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_8:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_9:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_10:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_11:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_12:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_13:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_14:
+      dim: property
+      type: continuous
+      max: 2
+      min: 0
+  - property_15:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_16:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_17:
+      dim: property
+      type: continuous
+      max: 339
+      min: 339
+  - property_18:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_19:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_20:
+      dim: property
+      type: continuous
+      max: 12
+      min: 3
+  - property_21:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_22:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_23:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_24:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_25:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_26:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_27:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_28:
+      dim: property
+      type: continuous
+      max: 1
+      min: 0
+  - property_29:
+      dim: property
+      type: continuous
+      max: 2
+      min: 0
+
+  - action:
+      dim: action
+      type: continuous
+      max: 1
+      min: -1
+
+  graph:
+    action:
+    - ts_obs
+    - property
+    delta_obs:
+    - ts_obs
+    - ts_action
+    - property
+    next_obs:
+    - obs
+    - delta_obs
+
+  nodes:
+    obs:
+      ts: 10
+    action:
+      ts: 10
+
+  expert_functions:
+    next_obs:
+        'node_function' : 'delta_obs.get_next_obs'
+

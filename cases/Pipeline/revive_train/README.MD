@@ -1,0 +1,1 @@
+python train.py -df ./data/pipeline.npz -cf ./data/pipeline.yaml -rcf ./data/bc.json -vm once -pm once --run_id bc
