@@ -1,0 +1,45 @@
+metadata:
+  columns:
+  - X-axis:
+      dim: rocket_state
+      type: continuous
+  - Y-axis:
+      dim: rocket_state
+      type: continuous
+  - X-velocity:
+      dim: rocket_state
+      type: continuous
+  - Y-velocity:
+      dim: rocket_state
+      type: continuous
+  - angle:
+      dim: rocket_state
+      type: continuous
+  - angular_velocity:
+      dim: rocket_state
+      type: continuous
+  - wind_speed:
+      dim: wind_speed
+      type: continuous
+  - main_engine_power:
+      dim: engine_power
+      type: continuous
+  - left_right_engine_power:
+      dim: engine_power
+      type: continuous
+  - done:
+      dim: done
+      type: continuous
+  graph:
+    delta_rocket_state:
+    - rocket_state
+    - wind_speed
+    - engine_power
+    next_rocket_state:
+    - rocket_state
+    - delta_rocket_state
+    done:
+    - next_rocket_state
+  expert_functions:
+    done:
+      node_function: rocketrecovery_terminated.get_terminated
